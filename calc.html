@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<body>
+<div class="container">
+    <div style="margin-top:30px;" class="row"
+    <div class="col">
+
+        <form>
+
+
+            <div class="form-group">
+                <label for="directionCurrency">Напаравление обмена</label>
+                <select class="form-control" id="directionCurrency">
+                    <option value="1">USD to UAH</option>
+                    <option value="2">UAH to USD</option>
+                </select>
+
+                <form>
+
+            </div>
+
+            <div class="form-group">
+                <label for="directionCurrency">Напаравление обмена</label>
+                <input value="120" type="text" class="form-control" id="amount">
+
+            </div>
+
+
+            <button type="button" id="btnCalc" class="btn btn-primary">Расчет</button>
+        </form>
+
+
+        <!-- <div class="form-group">
+             <label for="answerImp">Результат</label>
+             <input type="text" class="form-control" id="answerImp">
+
+         </div>-->
+        <!---->
+
+        <h1 id="answer"></h1>
+        <h1 id="answer2"></h1>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+        let directionCurrency;
+
+
+        let btnCalc = $('#btnCalc');
+        btnCalc.click(function () {
+            let amount = $('#amount').val();
+            let result = amount * 30;
+
+
+            /* $('#answer').val();*/
+
+            $('answer').html(result);
+
+            let answer = $('#answer').html();
+            $('answer2').html(answer + 'uah');
+        });
+
+
+        $('.container').keyup(function () {
+            if ($('#directionCurrency').val() == 1) {
+                let amount = $('#amount').val();
+                let result = amount * 30;
+
+
+                /* $('#answer').val();*/
+
+                $('answer').html(result);
+
+                let answer = $('#answer').html();
+                $('answer2').html(answer + 'uah');
+
+            } else {
+                let amount = $('#amount').val();
+                let result = amount * 0.33333;
+
+
+                /* $('#answer').val();*/
+
+                $('answer').html(result);
+
+                let answer = $('#answer').html();
+                $('answer2').html(answer + 'uah');
+
+            }
+        )
+            ;
+
+            $('.container').click(function () {
+                if ($('#directionCurrency').val() == 1) {
+                    let amount = $('#amount').val();
+                    let result = amount * 30;
+
+
+                    /* $('#answer').val();*/
+
+                    $('answer').html(result);
+
+                    let answer = $('#answer').html();
+                    $('answer2').html(answer + 'uah');
+
+                } else {
+                    let amount = $('#amount').val();
+                    let result = amount * 0.33333;
+
+
+                    /* $('#answer').val();*/
+
+                    $('answer').html(result);
+
+                    let answer = $('#answer').html();
+                    $('answer2').html(answer + 'uah');
+
+                }
+            }
+
+
+    </script>
+
+
+</body>
+</html>
